@@ -8,6 +8,6 @@ public class Monstruo extends Carta {
     }
 
     public void atacar() {
-        System.out.println(getNombre() + " ataca con " + getAtaque() + " puntos!");
+        System.out.println(getNombre() + " ataca con " + getAtaque() + " puntos");
     }
 }
