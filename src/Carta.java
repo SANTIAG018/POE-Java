@@ -1,26 +1,22 @@
+// clase base de todas las cartas
 public abstract class Carta {
 
-    private String nombreCarta;
-    private TipoCarta tipoCarta;
-    private boolean estaVisible;
+    private String nombre;
+    private TipoCarta tipo;
 
-    public Carta(String nombreCarta, TipoCarta tipoCarta, boolean estaVisible) {
-        this.nombreCarta = nombreCarta;
-        this.tipoCarta = tipoCarta;
-        this.estaVisible = estaVisible;
+    public Carta(String nombre, TipoCarta tipo) {
+        this.nombre = nombre;
+        this.tipo = tipo;
     }
 
-    public String getNombreCarta() {
-        return nombreCarta;
+    public String getNombre() {
+        return nombre;
     }
 
-    public TipoCarta getTipoCarta() {
-        return tipoCarta;
+    public TipoCarta getTipo() {
+        return tipo;
     }
 
-    public boolean isEstaVisible() {
-        return estaVisible;
-    }
-
-    public abstract void usar(Jugador jugadorActual, Jugador jugadorRival);
+    // cada carta hace algo diferente
+    public abstract void usar(Jugador actual, Jugador rival);
 }
