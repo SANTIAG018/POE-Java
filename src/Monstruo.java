@@ -1,13 +1,27 @@
 public class Monstruo extends Carta {
 
-    public Monstruo() {
+    private int puntosAtaque;
+    private int puntosDefensa;
+    private int nivel;
+
+    public Monstruo(String nombreCarta, int puntosAtaque, int puntosDefensa, int nivel) {
+        super(nombreCarta, TipoCarta.MONSTRUO, true);
+        this.puntosAtaque = puntosAtaque;
+        this.puntosDefensa = puntosDefensa;
+        this.nivel = nivel;
     }
 
-    public Monstruo(String nombre, short ataque, short defensa, Estrellas estrellas, boolean visible) {
-        super(nombre, ataque, defensa, TipoCarta.MONSTRUO, estrellas, visible);
+    public int getPuntosAtaque() {
+        return puntosAtaque;
     }
 
-    public void atacar() {
-        System.out.println(getNombre() + " ataca con " + getAtaque() + " puntos");
+    public int getPuntosDefensa() {
+        return puntosDefensa;
+    }
+
+    public void usar(Jugador jugadorActual, Jugador jugadorRival) {
+        // aqui se invoca el monstruo
+        jugadorActual.invocarMonstruo(this);
+        System.out.println("Invocaste a " + getNombreCarta());
     }
 }
