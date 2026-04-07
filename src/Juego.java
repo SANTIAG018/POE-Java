@@ -30,19 +30,19 @@ public class Juego {
             Jugador rival = turnoJ1 ? j2 : j1;
 
             System.out.println("\n-----------------------");
-            System.out.println("turno de " + actual.getNombre());
-            System.out.println("vida: " + actual.getVida());
-            System.out.println("vida rival: " + rival.getVida());
+            System.out.println("Turno de " + actual.getNombre());
+            System.out.println("Vida: " + actual.getVida());
+            System.out.println("Vida rival: " + rival.getVida());
 
             actual.robarCarta();
 
-            System.out.println("mano:");
+            System.out.println("Mano:");
             for (int i = 0; i < actual.getMano().size(); i++) {
                 System.out.println(i + " - " + actual.getMano().get(i).getNombre());
             }
 
-            System.out.println("1. jugar carta");
-            System.out.println("2. atacar");
+            System.out.println("1. Jugar carta");
+            System.out.println("2. Atacar");
             int op = sc.nextInt();
 
             if (op == 1 && actual.getMano().size() > 0) {
@@ -60,8 +60,8 @@ public class Juego {
 
         System.out.println("\n======================");
         if (j1.getVida() <= 0)
-            System.out.println("Gano " + j2.getNombre());
+            System.out.println("Ganó " + j2.getNombre());
         else
-            System.out.println("Gano " + j1.getNombre());
+            System.out.println("Ganó " + j1.getNombre());
     }
 }
